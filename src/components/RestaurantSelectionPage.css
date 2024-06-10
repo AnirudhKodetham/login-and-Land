@@ -1,4 +1,4 @@
-/* src/components/LandingPage.css */
+/* src/components/RestaurantSelectionPage.css */
 
 body, html {
     margin: 0;
@@ -27,13 +27,12 @@ body, html {
     font-weight: bold;
     color: #333;
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: black; /* Deep pink */
+    color: #ff1493; /* Deep pink */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
   
   .navbar-links {
     list-style-type: none;
-    
     margin: 0;
     padding: 0;
     display: flex;
@@ -59,30 +58,30 @@ body, html {
     border-radius: 5px;
   }
   
-  .landing-content {
+  .restaurant-content {
     text-align: center;
     margin-top: 100px; /* Adjust margin to accommodate the fixed navbar */
   }
   
-  .landing-content h1 {
+  .restaurant-content h1 {
     color: #fff;
     font-size: 2.5em;
   }
   
-  .tiles {
+  .restaurant-tiles {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
   }
   
-  .tile {
+  .restaurant-tile {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,13 +89,13 @@ body, html {
     transition: transform 0.3s;
   }
   
-  .tile img {
+  .restaurant-tile img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .tile:hover {
+  .restaurant-tile:hover {
     transform: scale(1.05);
   }
   
