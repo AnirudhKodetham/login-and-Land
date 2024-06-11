@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import BillModal from './BillModal';
 import './RestaurantSelectionPage.css';
 
 const RestaurantSelectionPage = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <div>
       <nav className="navbar">
@@ -17,20 +28,21 @@ const RestaurantSelectionPage = () => {
       <div className="restaurant-content">
         <h1>Please select your restaurant</h1>
         <div className="restaurant-tiles">
-          <div className="restaurant-tile">
+          <div className="restaurant-tile" onClick={openModal}>
             <img src="/images/restaurant1.jpg" alt="Restaurant 1" />
           </div>
-          <div className="restaurant-tile">
+          <div className="restaurant-tile" onClick={openModal}>
             <img src="/images/restaurant2.jpg" alt="Restaurant 2" />
           </div>
-          <div className="restaurant-tile">
+          <div className="restaurant-tile" onClick={openModal}>
             <img src="/images/restaurant3.jpg" alt="Restaurant 3" />
           </div>
-          <div className="restaurant-tile">
+          <div className="restaurant-tile" onClick={openModal}>
             <img src="/images/restaurant4.jpg" alt="Restaurant 4" />
           </div>
         </div>
       </div>
+      <BillModal isOpen={modalIsOpen} onRequestClose={closeModal} />
     </div>
   );
 };
